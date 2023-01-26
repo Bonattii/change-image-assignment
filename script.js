@@ -50,10 +50,16 @@ function showMyImage() {
 let blockItem = document.querySelector('.block');
 
 blockItem.addEventListener('mouseover', changeBackground);
+blockItem.addEventListener('mouseout', returnToFirstBackground);
 
 // CHANGE THE BLOCK CSS BACK AGAIN WHEN THE MOUSEOUT event is fired
 
 function changeBackground() {
   blockItem.style.background = 'green';
   blockItem.style.border = '10px solid black';
+}
+
+function returnToFirstBackground() {
+  blockItem.style.background = 'brown';
+  blockItem.style.border = 'none';
 }
